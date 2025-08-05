@@ -182,10 +182,10 @@ const ProjectsSection: React.FC = () => {
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="group inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+              className="group inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-amber-500 to-pink-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <LucideGithub className="w-5 h-5 group-hover:rotate-12 transition-transform duration-200" />
-              <span>View All Projects on GitHub</span>
+              <span>More on GitHub</span>
               <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
             </motion.button>
           </a>

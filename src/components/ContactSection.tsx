@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Linkedin, 
-  Send, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Send,
   MessageCircle,
   Clock,
   Globe,
@@ -57,38 +57,38 @@ const ContactSection: React.FC = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setIsSubmitting(true);
+    e.preventDefault();
+    setIsSubmitting(true);
 
-  try {
-    const response = await fetch("https://formspree.io/f/mgvynleq", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    try {
+      const response = await fetch("https://formspree.io/f/mgvynleq", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    if (response.ok) {
-      setSubmitted(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } else {
-      alert("Something went wrong. Please try again.");
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Something went wrong.");
     }
-  } catch (error) {
-    console.error("Error:", error);
-    alert("Something went wrong.");
-  }
 
-  setIsSubmitting(false);
-  setTimeout(() => setSubmitted(false), 5000);
-};
+    setIsSubmitting(false);
+    setTimeout(() => setSubmitted(false), 5000);
+  };
 
 
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900" />
-      
+
       {/* Decorative Elements */}
       <div className="absolute inset-0">
         <motion.div
@@ -148,7 +148,7 @@ const ContactSection: React.FC = () => {
                 Get In Touch
               </h3>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-                I'm always open to discussing new opportunities, innovative projects, and potential collaborations. 
+                I'm always open to discussing new opportunities, innovative projects, and potential collaborations.
                 Whether you have a project in mind or just want to connect, I'd love to hear from you.
               </p>
             </div>
@@ -336,7 +336,7 @@ const ContactSection: React.FC = () => {
                     disabled={isSubmitting}
                     whileHover={{ scale: 1.02, y: -2 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full flex items-center justify-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+                      className="w-full flex items-center justify-center space-x-2 px-8 py-4 bg-gradient-to-r from-amber-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <>

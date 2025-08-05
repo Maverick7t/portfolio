@@ -1,18 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, MapPin, Calendar, Award } from 'lucide-react';
+import { GraduationCap, MapPin, Calendar, Award, User } from 'lucide-react';
 
 const AboutSection: React.FC = () => {
-  const stats = [
-    { label: 'CGPA', value: '7.1', icon: Award },
-    { label: 'LeetCode Problems Solved', value: '70+', icon: Award },
-  ];
-
   return (
     <section id="about" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900" />
-      
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -28,14 +24,15 @@ const AboutSection: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        {/* Grid Layout */}
+        <div className="grid lg:grid-cols-2 gap-12 items-stretch">
           {/* Left Column - Education Cards */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative space-y-10"
+            className="space-y-10"
           >
             {/* Bachelor */}
             <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 dark:border-gray-700/30 transform hover:scale-105 transition-all duration-300">
@@ -48,7 +45,6 @@ const AboutSection: React.FC = () => {
                   <p className="text-gray-600 dark:text-gray-400">Bachelor</p>
                 </div>
               </div>
-
               <div className="space-y-4">
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -58,19 +54,14 @@ const AboutSection: React.FC = () => {
                     KLE Technological University
                   </p>
                 </div>
-
                 <div className="flex items-center text-gray-600 dark:text-gray-400 space-x-4">
-                  <div className="flex items-center">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    <span>Jun 2021 - May 2024</span>
-                  </div>
+                  <Calendar className="w-4 h-4 mr-2" />
+                  <span>Jun 2021 - May 2024</span>
                 </div>
-
                 <div className="flex items-center text-gray-600 dark:text-gray-400">
                   <MapPin className="w-4 h-4 mr-2" />
                   <span>BVB, Hubli</span>
                 </div>
-
                 <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
                   <div className="text-2xl font-bold text-green-600 dark:text-green-400">
                     CGPA: 7.1
@@ -91,29 +82,23 @@ const AboutSection: React.FC = () => {
                   <p className="text-gray-600 dark:text-gray-400">Diploma</p>
                 </div>
               </div>
-
               <div className="space-y-4">
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
                     Diploma in Electronics and Communication Engineering
                   </h4>
                   <p className="text-green-600 dark:text-green-400 font-medium">
-                    K.H.Kabbur Institute of Engneering, Dharwad
+                    K.H.Kabbur Institute of Engineering, Dharwad
                   </p>
                 </div>
-
                 <div className="flex items-center text-gray-600 dark:text-gray-400 space-x-4">
-                  <div className="flex items-center">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    <span>Jun 2018 - May 2021</span>
-                  </div>
+                  <Calendar className="w-4 h-4 mr-2" />
+                  <span>Jun 2018 - May 2021</span>
                 </div>
-
                 <div className="flex items-center text-gray-600 dark:text-gray-400">
                   <MapPin className="w-4 h-4 mr-2" />
                   <span>Dharwad, Karnataka</span>
                 </div>
-
                 <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
                   <div className="text-2xl font-bold text-green-600 dark:text-green-400">
                     CGPA: 6.0
@@ -124,66 +109,34 @@ const AboutSection: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Right Column - Stats + Skills */}
+          {/* Right Column - My Journey Card */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-6"
+            className="h-full"
           >
-            <div className="grid grid-cols-2 gap-4">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ scale: 1.05, rotateY: 5 }}
-                  className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg border border-white/20 dark:border-gray-700/30 text-center transform-gpu"
-                  style={{
-                    transformStyle: 'preserve-3d',
-                  }}
-                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <stat.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Skills */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg border border-white/20 dark:border-gray-700/30"
-            >
-              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Core Technologies</h4>
-              <div className="flex flex-wrap gap-2">
-                {['Python', 'C++', 'Linux', 'MySQL', 'MongoDB', 'PyTorch', 'TensorFlow', 'Docker'].map((skill, index) => (
-                  <motion.span
-                    key={skill}
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                    whileHover={{ scale: 1.1 }}
-                    className="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium border border-blue-200 dark:border-blue-800"
-                  >
-                    {skill}
-                  </motion.span>
-                ))}
+            <div className="h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl p-10 shadow-xl border border-white/20 dark:border-gray-700/30 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(13,148,136,0.4)] transition-all duration-300 flex flex-col justify-start">
+              <div className="flex items-center mb-6">
+                <div className="w-14 h-14 bg-gradient-to-br from-indigo-500 to-teal-600 rounded-xl flex items-center justify-center">
+                  <User className="w-7 h-7 text-white" />
+                </div>
+                <div className="ml-4">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white">My Journey</h3>
+                  <p className="text-gray-600 dark:text-gray-400">A Brief Story</p>
+                </div>
               </div>
-            </motion.div>
+              <p className="text-gray-700 dark:text-gray-300 text-md leading-relaxed">
+                I didn’t take the straight path to engineering I forged my own. From giving JEE multiple to diploma and lateral-entry ECE engineering at a tier-3 college, my journey is a testament to stubborn self-determination, not luck. I come from a background where even the idea of cracking JEE or building a career in AI was unheard so I taught myself. I didn’t wait for opportunities, I created them.
+                <br /><br />
+                Growing up, I was fascinated by the idea of machines that could think and adapt, like JARVIS from Iron Man. That childhood dream became my reality when I discovered the world of AI and machine learning. It wasn’t just a field it was a calling.
+                <br /><br />
+                During my engineering studies, I secured an internship in at IIT, where I worked hands-on with neural networks, Data concept, Automation and ETL pipeplines. This experience solidified my passion for this field. To further hone my skills, I cleared the AWS Solutions Architect Associate (SAA-C03) exam in just one month a challenge I took on to prove to myself that I can master anything.
+                <br /><br />
+                I’m not driven by titles or trends I’m driven by problems worth solving. I’m looking for a team that values curiosity over credentials, grit over GPA, and real work over résumé buzzwords. If you’re ready to build the future, let’s talk. Got a role or project in mind? Let’s bring it to life.
+              </p>
+            </div>
           </motion.div>
         </div>
       </div>
