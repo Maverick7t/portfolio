@@ -56,13 +56,13 @@ const AchievementsSection: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-6">
             {certifications.map((cert, index) => (
               <motion.div
-                key={cert.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                whileHover={{ scale: 1.02, y: -5 }}
-                className="group relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-white/30 dark:border-gray-700/40 transform-gpu"
+                transition={{ duration: 0.1, ease: "easeOut" }} // smoother & snappier
+                whileHover={{ scale: 1.03, rotateX: 1 }} // subtle tilt effect
+                className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 dark:border-gray-700/30 transform-gpu"
+                style={{ transformStyle: 'preserve-3d' }}
               >
                 <div className="flex items-start space-x-4">
                   <div className={`flex-shrink-0 w-12 h-12 bg-gradient-to-br ${cert.gradient} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>

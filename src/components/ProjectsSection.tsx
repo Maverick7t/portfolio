@@ -61,13 +61,12 @@ const ProjectsSection: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <motion.div
-              key={project.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              whileHover={{ scale: 1.02, rotateY: 5 }}
-              className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 dark:border-gray-700/30 transform-gpu"
+              transition={{ duration: 0.1, ease: "easeOut" }} // smoother & snappier
+              whileHover={{ scale: 1.03, rotateX: 1 }} // subtle tilt effect
+              className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 dark:border-gray-700/30 transform-gpu"
               style={{ transformStyle: 'preserve-3d' }}
             >
               {/* Project Icon */}

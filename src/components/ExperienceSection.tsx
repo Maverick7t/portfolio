@@ -19,7 +19,7 @@ const ExperienceSection: React.FC = () => {
   return (
     <section id="experience" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800" />
-      
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -41,8 +41,8 @@ const ExperienceSection: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            whileHover={{ scale: 1.02, rotateX: 2 }}
+            transition={{ duration: 0.1, ease: "easeOut" }} // smoother & snappier
+            whileHover={{ scale: 1.03, rotateX: 1 }} // subtle tilt effect
             className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 dark:border-gray-700/30 transform-gpu"
             style={{ transformStyle: 'preserve-3d' }}
           >

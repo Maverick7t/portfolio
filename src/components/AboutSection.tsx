@@ -1,6 +1,35 @@
+"use client";
+
 import React from 'react';
-import { motion } from 'framer-motion';
-import { GraduationCap, MapPin, Calendar, Award, User } from 'lucide-react';
+import { motion } from "framer-motion";
+import { GraduationCap, MapPin, Calendar, User, Code2 } from 'lucide-react';
+import { SiPython } from 'react-icons/si';
+import { SiMysql } from 'react-icons/si';
+import { SiApacheairflow } from 'react-icons/si';
+import { SiPostgresql } from 'react-icons/si';
+import { SiReact } from 'react-icons/si';
+import { SiNextdotjs } from 'react-icons/si';
+import { SiDocker } from "react-icons/si";
+import { SiKubernetes } from "react-icons/si";
+import { SiGit } from "react-icons/si";
+import { SiTerraform } from "react-icons/si";
+import { SiNodedotjs } from 'react-icons/si';
+import { SiGnubash } from 'react-icons/si';
+
+const techIcons = [
+  { icon: SiPython, name: 'Python' },
+  { icon: SiMysql, name: 'MySQL' },
+  { icon: SiApacheairflow, name: 'Apache Airflow' },
+  { icon: SiPostgresql, name: 'PostgreSQL' },
+  { icon: SiReact, name: 'React' },
+  { icon: SiNextdotjs, name: 'Next.js' },
+  { icon: SiDocker, name: 'Docker' },
+  { icon: SiKubernetes, name: 'Kubernetes' },
+  { icon: SiGit, name: 'Git' },
+  { icon: SiTerraform, name: 'Terraform' },
+  { icon: SiNodedotjs, name: 'Node.js' },
+  { icon: SiGnubash, name: 'Bash' },
+];
 
 const AboutSection: React.FC = () => {
   return (
@@ -127,21 +156,102 @@ const AboutSection: React.FC = () => {
                   <p className="text-gray-600 dark:text-gray-400">A Brief Story</p>
                 </div>
               </div>
-              <p className="text-gray-700 dark:text-gray-300 text-md leading-relaxed">
-                I didn’t take the straight path to engineering I forged my own. From giving JEE multiple to diploma and lateral-entry ECE engineering at a tier-3 college, my journey is a testament to stubborn self-determination, not luck. I come from a background where even the idea of cracking JEE or building a career in AI was unheard so I taught myself. I didn’t wait for opportunities, I created them.
-                <br /><br />
-                Growing up, I was fascinated by the idea of machines that could think and adapt, like JARVIS from Iron Man. That childhood dream became my reality when I discovered the world of AI and machine learning. It wasn’t just a field it was a calling.
-                <br /><br />
-                During my engineering studies, I secured an internship in at IIT, where I worked hands-on with neural networks, Data concept, Automation and ETL pipeplines. This experience solidified my passion for this field. To further hone my skills, I cleared the AWS Solutions Architect Associate (SAA-C03) exam in just one month a challenge I took on to prove to myself that I can master anything.
-                <br /><br />
-                I’m not driven by titles or trends I’m driven by problems worth solving. I’m looking for a team that values curiosity over credentials, grit over GPA, and real work over résumé buzzwords. If you’re ready to build the future, let’s talk. Got a role or project in mind? Let’s bring it to life.
-              </p>
+              <div className="space-y-6">
+                <blockquote className="border-l-4 border-gray-400 pl-4 text-gray-600 dark:text-gray-300 italic">
+                  <p>Didn't get IIT. Reappeared JEE nothing.</p>
+                  <p>Took diploma. Finished engineering.</p>
+                  <p>Didn’t whine. Didn’t settle.</p>
+                  <p>I chose ambition over approval.</p>
+                </blockquote>
+                <p className="text-gray-700 dark:text-gray-300">
+                  In 2022, JARVIS stopped being fiction.<br />
+                  AI became real and I knew: that’s <em>my</em> domain.
+                </p>
+                <p className="text-gray-700 dark:text-gray-300">
+                  No top-tier degree. No golden resume.<br />
+                  Just obsession and grit.
+                </p>
+                <p className="text-gray-700 dark:text-gray-300">
+                  You don’t need another safe hire.<br />
+                  You need someone who refuses to be<strong> AVERAGE</strong>.
+                </p>
+                <p className="text-gray-700 dark:text-gray-300">
+                  Let’s build something worth bleeding for.
+                </p>
+                <div className="pt-4">
+                  <h4 className="text-lg font-semibold text-green-600 dark:text-green-400">
+                    <strong>Hobbies & Interest</strong>
+                  </h4>
+                  <ul className="list-disc list-inside mt-2 space-y-1 text-sm marker:text-white dark:marker:text-white">
+                    <li><strong className="text-gray-700 dark:text-gray-300">Into :</strong> <span className="text-gray-700 dark:text-gray-300">Muay Thai 🤛🏻 | Karate 🥋 | Cooking 🍽</span></li>
+                    <li><strong className="text-gray-700 dark:text-gray-300">Love to watch :</strong> <span className="text-gray-700 dark:text-gray-300">F1 🏎 | MotoGP 🏍 | UFC 🥊 | Sci-Fi 🎬</span></li>
+                    <li className="text-gray-700 dark:text-gray-300">Debugs to Lo-fi &amp; Eminem</li>
+                    <li className="text-gray-700 dark:text-gray-300">Off Road Ride when tempted</li>
+                    <li className="text-gray-700 dark:text-gray-300">Hardcore Gamer</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
+
+        {/* Horizontal Tech Stack Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          whileHover={{
+            scale: 1.05,
+            boxShadow: "0 0 25px rgba(13,148,136,0.4)"
+          }}
+          transition={{
+            type: "tween",     // disables spring animation
+            duration: 0.25,     // controls hover response speed
+            ease: "easeInOut"
+          }}
+          className="mt-16 w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/20 dark:border-gray-700/30 rounded-3xl p-10 shadow-xl transform will-change-transform hover:scale-105"
+        >
+          <div className="flex items-center mb-6">
+            <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-teal-600 rounded-xl flex items-center justify-center">
+              <Code2 className="w-6 h-6 text-white" />
+            </div>
+            <div className="ml-4">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white">Tech Stack</h3>
+              <p className="text-gray-600 dark:text-gray-400">Tools & Technologies I Use</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 justify-center">
+            {techIcons.map((tech, index) => (
+              <motion.div
+                key={index}
+                initial={{ scale: 1, boxShadow: "0 0 0 rgba(0,0,0,0)" }}
+                animate={{
+                  scale: [1, 1.2, 1],
+                  boxShadow: [
+                    "0 0 0 rgba(0,0,0,0)",
+                    "0 0 25px rgba(99,102,241,0.9)",
+                    "0 0 0 rgba(0,0,0,0)"
+                  ]
+                }}
+                transition={{
+                  delay: index * 1.5,
+                  duration: 1.2,
+                  repeat: Infinity,
+                  repeatDelay: (techIcons.length - 1) * 1.5,
+                  ease: "easeInOut"
+                }}
+                className="w-20 h-20 flex flex-col items-center justify-center rounded-xl bg-gradient-to-tr from-blue-600 to-purple-600 text-white"
+                title={tech.name}
+              >
+                <tech.icon className="w-8 h-8 mb-1" />
+                <span className="text-xs text-center mt-1">{tech.name}</span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
 };
-
 export default AboutSection;
