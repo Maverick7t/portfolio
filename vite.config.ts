@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     react(),
     createHtmlPlugin({ minify: true }),
-    compression(), // gzip compression for smaller bundles
+    compression(),
   ],
   resolve: {
     alias: {
@@ -16,7 +16,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['react-icons/si']  // ✅ This line fixes the Vercel build crash
+    include: ['react-icons/si'],
   },
   build: {
     chunkSizeWarningLimit: 800,
