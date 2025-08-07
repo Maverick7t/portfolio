@@ -15,6 +15,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
+  optimizeDeps: {
+    include: ['react-icons/si']  // ✅ This line fixes the Vercel build crash
+  },
   build: {
     chunkSizeWarningLimit: 800,
     rollupOptions: {
