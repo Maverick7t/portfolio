@@ -4,9 +4,20 @@ import React from 'react';
 import { motion } from "framer-motion";
 import { GraduationCap, MapPin, Calendar, User, Code2 } from 'lucide-react';
 
-// ✅ Explicit imports to prevent Vercel build failure
-import { SiPython, SiMysql, SiApacheairflow, SiPostgresql, SiReact, SiNextdotjs, SiDocker, SiKubernetes, SiGit, SiTerraform, SiNodedotjs, SiGnubash } from 'react-icons/si';
-
+import {
+  SiPython,
+  SiMysql,
+  SiApacheairflow,
+  SiPostgresql,
+  SiReact,
+  SiNextdotjs,
+  SiDocker,
+  SiKubernetes,
+  SiGit,
+  SiTerraform,
+  SiNodedotjs,
+  SiGnubash,
+} from 'react-icons/si';
 
 const techIcons = [
   { icon: SiPython, name: 'Python' },
