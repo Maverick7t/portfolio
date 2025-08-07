@@ -205,11 +205,6 @@ const AboutSection: React.FC = () => {
             scale: 1.05,
             boxShadow: "0 0 25px rgba(13,148,136,0.4)"
           }}
-          transition={{
-            type: "tween",     // disables spring animation
-            duration: 0.25,     // controls hover response speed
-            ease: "easeInOut"
-          }}
           className="mt-16 w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/20 dark:border-gray-700/30 rounded-3xl p-10 shadow-xl transform will-change-transform hover:scale-105"
         >
           <div className="flex items-center mb-6">
