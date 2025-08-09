@@ -74,17 +74,14 @@ const AboutSection: React.FC = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">Education</h3>
-                  <p className="text-gray-600 dark:text-gray-400">Bachelor</p>
+                  <p className="text-gray-600 dark:text-gray-400">B.E - Electronics & Communication</p>
                 </div>
               </div>
               <div className="space-y-4">
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                    BE in Electronics and Communication Engineering
-                  </h4>
-                  <p className="text-blue-600 dark:text-blue-400 font-medium">
+                  <h4 className="text-lg font-semibold text-blue-600 dark:text-blue-400">
                     KLE Technological University
-                  </p>
+                  </h4>
                 </div>
                 <div className="flex items-center text-gray-600 dark:text-gray-400 space-x-4">
                   <Calendar className="w-4 h-4 mr-2" />
@@ -92,13 +89,7 @@ const AboutSection: React.FC = () => {
                 </div>
                 <div className="flex items-center text-gray-600 dark:text-gray-400">
                   <MapPin className="w-4 h-4 mr-2" />
-                  <span>BVB, Hubli</span>
-                </div>
-                <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
-                  <div className="text-2xl font-bold text-green-600 dark:text-green-400">
-                    CGPA: 7.1
-                  </div>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Graduate</p>
+                  <span>BVB campus Vidyanagr, Hubli</span>
                 </div>
               </div>
             </div>
@@ -111,17 +102,14 @@ const AboutSection: React.FC = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">Education</h3>
-                  <p className="text-gray-600 dark:text-gray-400">Diploma</p>
+                  <p className="text-gray-600 dark:text-gray-400">Diploma - Electronics & Communication</p>
                 </div>
               </div>
               <div className="space-y-4">
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                    Diploma in Electronics and Communication Engineering
-                  </h4>
-                  <p className="text-green-600 dark:text-green-400 font-medium">
+                  <h4 className="text-lg font-semibold text-green-600 dark:text-green-400">
                     K.H.Kabbur Institute of Engineering, Dharwad
-                  </p>
+                  </h4>
                 </div>
                 <div className="flex items-center text-gray-600 dark:text-gray-400 space-x-4">
                   <Calendar className="w-4 h-4 mr-2" />
@@ -131,11 +119,33 @@ const AboutSection: React.FC = () => {
                   <MapPin className="w-4 h-4 mr-2" />
                   <span>Dharwad, Karnataka</span>
                 </div>
-                <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
-                  <div className="text-2xl font-bold text-green-600 dark:text-green-400">
-                    CGPA: 6.0
-                  </div>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Diploma</p>
+              </div>
+            </div>
+
+            {/* PUC */}
+            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 dark:border-gray-700/30 transform hover:scale-105 transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+                  <GraduationCap className="w-6 h-6 text-white" />
+                </div>
+                <div className="ml-4">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">Education</h3>
+                  <p className="text-gray-600 dark:text-gray-400">PUC - Science</p>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-lg font-semibold text-blue-600 dark:text-blue-400">
+                    R.S.H PU Science College, Dharwad
+                  </h4>
+                </div>
+                <div className="flex items-center text-gray-600 dark:text-gray-400 space-x-4">
+                  <Calendar className="w-4 h-4 mr-2" />
+                  <span>Jun 2016 - May 2018</span>
+                </div>
+                <div className="flex items-center text-gray-600 dark:text-gray-400">
+                  <MapPin className="w-4 h-4 mr-2" />
+                  <span>Dharwad, Karnataka</span>
                 </div>
               </div>
             </div>
@@ -252,4 +262,5 @@ const AboutSection: React.FC = () => {
     </section>
   );
 };
+
 export default AboutSection;
