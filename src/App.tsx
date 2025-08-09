@@ -21,10 +21,10 @@ function App() {
         
         <main className="relative z-10">
           <HeroSection />
-          <AboutSection />
           <ExperienceSection />
           <ProjectsSection />
           <AchievementsSection />
+          <AboutSection />
           <ContactSection />
         </main>
         
